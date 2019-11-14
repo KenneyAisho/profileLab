@@ -13,7 +13,11 @@ export class ProfileService {
 
   constructor() {}
 
-  getUserProfile() {
+  getUserProfile(): UserProfile {
     return this.profile;
+  }
+
+  setUserProfile(newInfo: UserProfile): void {
+    this.profile = newInfo;
   }
 }

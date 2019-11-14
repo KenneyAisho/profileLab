@@ -1,5 +1,5 @@
 <section>
-  <form>
+  <form (ngSubmit)='submitProfile()'>
     <h4>Use the form below to update your profile</h4>
     <label>Name:
       <input [(ngModel)]='profile.name' name='profileName'>

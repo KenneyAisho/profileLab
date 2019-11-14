@@ -11,7 +11,14 @@ import { ProfileService } from '../service/profile.service';
 export class EditComponent implements OnInit {
   profile: UserProfile;
 
-  constructor(private profileService: ProfileService) {}
+  constructor(private profileService: ProfileService, private router: Router) {}
+
+  // calling a method from this service called setUserProfile
+  // passing in this.profile as an argument.
+  submitProfile() {
+    this.profileService.setUserProfile(this.profile);
+    this.router.navigate(['/profile']);
+  }
 
   ngOnInit() {
     this.profile = this.profileService.getUserProfile();
