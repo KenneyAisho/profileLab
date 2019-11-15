@@ -1,17 +1,26 @@
-<section>
+<section class="container">
   <form (ngSubmit)='submitProfile()'>
     <h4>Use the form below to update your profile</h4>
-    <label>Name:
-      <input [(ngModel)]='profile.name' name='profileName'>
+    <label>Name
+      <p>
+        <input [(ngModel)]='profile.name' name='profileName'>
+      </p>
     </label>
-    <label>Contact:
-      <input [(ngModel)]='profile.contact' name='profileContact'>
+    <label>Contact
+      <p>
+        <input [(ngModel)]='profile.contact' name='profileContact'>
+      </p>
     </label>
-    <label>Bio:
-      <input [(ngModel)]='profile.bio' name='profileBio'>
+    <label>Bio
+      <p>
+        <textarea rows='5' cols='23' id='bio' [(ngModel)]='profile.bio' name='profileBio'></textarea>
+      </p>
     </label>
     <p>
       <button>Update</button>
+    </p>
+    <p>
+      <a routerLink='/profile'>View My Profile </a>
     </p>
   </form>
 </section>
